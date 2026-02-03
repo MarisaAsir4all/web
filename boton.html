@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Botón con fecha</title>
+  <style>
+    #btnDia {
+      background-color: pink;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button id="btnDia"></button>
+
+<script>
+  const boton = document.getElementById("btnDia");
+
+  const hoy = new Date().toLocaleDateString("es-ES");
+  boton.textContent = hoy;
+
+  boton.addEventListener("click", () => {
+    boton.style.backgroundColor = "green";
+  });
+</script>
+
+</body>
+</html>
